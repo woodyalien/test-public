@@ -1,8 +1,8 @@
 // Rolling Sphere Game
 // Main game module using Three.js and Cannon-ES
 
-import * as THREE from 'three';
-import * as CANNON from 'cannon-es';
+import * as THREE from 'https://esm.sh/three@0.150.0';
+import * as CANNON from 'https://esm.sh/cannon-es@0.20.0';
 import { levels } from './levels.js';
 
 // Game State

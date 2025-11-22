@@ -1,9 +1,7 @@
 // Rolling Sphere Game
-// Main game module using Three.js and Cannon-ES
-
-import * as THREE from 'https://cdn.skypack.dev/three@0.150.0';
-import * as CANNON from 'https://cdn.skypack.dev/cannon-es@0.20.0';
-import { levels } from './levels.js';
+// Main game module using Three.js and Cannon.js
+// THREE and CANNON are loaded as globals from CDN
+// levels is loaded from levels.js
 
 // Game State
 const gameState = {

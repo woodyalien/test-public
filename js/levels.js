@@ -1,6 +1,6 @@
 // Level definitions for Rolling Sphere Game
 
-export const levels = [
+const levels = [
     // Level 1: Introduction
     {
         name: "Getting Started",

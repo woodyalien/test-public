@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolling Sphere Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+
+        <!-- HUD -->
+        <div id="hud">
+            <div id="score">Score: <span id="score-value">0</span></div>
+            <div id="level">Level: <span id="level-value">1</span></div>
+            <div id="timer">Time: <span id="timer-value">0:00</span></div>
+        </div>
+
+        <!-- Start Menu -->
+        <div id="menu" class="overlay">
+            <div class="menu-content">
+                <h1>Rolling Sphere</h1>
+                <p class="subtitle">Navigate the sphere to the goal!</p>
+                <button id="start-btn" class="menu-btn">Start Game</button>
+                <button id="controls-btn" class="menu-btn secondary">Controls</button>
+                <div id="controls-info" class="hidden">
+                    <h3>Controls</h3>
+                    <p><strong>W / Arrow Up</strong> - Move Forward</p>
+                    <p><strong>S / Arrow Down</strong> - Move Backward</p>
+                    <p><strong>A / Arrow Left</strong> - Move Left</p>
+                    <p><strong>D / Arrow Right</strong> - Move Right</p>
+                    <p><strong>Space</strong> - Jump</p>
+                    <p><strong>R</strong> - Reset Level</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pause Menu -->
+        <div id="pause-menu" class="overlay hidden">
+            <div class="menu-content">
+                <h2>Paused</h2>
+                <button id="resume-btn" class="menu-btn">Resume</button>
+                <button id="restart-btn" class="menu-btn secondary">Restart Level</button>
+                <button id="main-menu-btn" class="menu-btn secondary">Main Menu</button>
+            </div>
+        </div>
+
+        <!-- Level Complete -->
+        <div id="level-complete" class="overlay hidden">
+            <div class="menu-content">
+                <h2>Level Complete!</h2>
+                <p>Time: <span id="complete-time">0:00</span></p>
+                <p>Score: <span id="complete-score">0</span></p>
+                <button id="next-level-btn" class="menu-btn">Next Level</button>
+            </div>
+        </div>
+
+        <!-- Game Over -->
+        <div id="game-over" class="overlay hidden">
+            <div class="menu-content">
+                <h2>Game Over</h2>
+                <p>Final Score: <span id="final-score">0</span></p>
+                <button id="retry-btn" class="menu-btn">Try Again</button>
+                <button id="game-over-menu-btn" class="menu-btn secondary">Main Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cannon-es@0.20.0/dist/cannon-es.min.js"></script>
+
+    <!-- Game Scripts -->
+    <script type="module" src="js/game.js"></script>
+</body>
+</html>
